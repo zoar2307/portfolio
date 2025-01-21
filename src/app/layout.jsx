@@ -18,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${OutfitFont.className} ${OvoFont.className} antialiased leading-8 overflow-x-hidden`}
       >
