@@ -36,7 +36,7 @@ const About = () => {
 
                     <h4 className='my-6 text-gray-700 font-Ovo'>Skills</h4>
 
-                    <ul className='flex items-center gap-3 sm:justify-evenly'>
+                    <ul className='flex items-center gap-3 flex-wrap sm:flex-nowrap justify-evenly'>
                         {SkillsAndTools.map(({ title, icon }, idx) => {
                             return (
                                 <li key={idx}
