@@ -9,6 +9,9 @@ import user_img from "@/assets/user-image.png"
 import hand_icon from "@/assets/hand-icon.png"
 import right_arrow_white from "@/assets/right-arrow-white.png"
 import download_icon from "@/assets/download-icon.png"
+import send_icon from "@/assets/send-icon.png"
+import github_icon from "@/assets/github-icon.png"
+
 import code_icon from "@/assets/code-icon.png"
 import code_icon_dark from "@/assets/code-icon-dark.png"
 import edu_icon from "@/assets/edu-icon.png"
@@ -45,6 +48,8 @@ export const Assets = {
     right_arrow_white,
     download_icon,
     user_img,
+    send_icon,
+    github_icon,
 
     code_icon,
     code_icon_dark,
@@ -128,4 +133,20 @@ export const ServicesData = [
         description: 'A cross-platform mobile app built with React Native allows shared codebases for iOS and Android, leveraging native performance and features.',
         link: ''
     },
+]
+
+export const WorkData = [
+    {
+        title: 'Sundae',
+        description: 'Monday Clone App , Web App with CSR (React)',
+        bgImage: '/sundae.png',
+        link: 'https://sundae.onrender.com/',
+        githubLink: 'https://github.com/zoar2307/Monday-backend-project'
+    },
+    {
+        title: 'My Portfolio',
+        description: 'Website with SSR (Next.js)',
+        bgImage: '/work-2.png'
+    },
+
 ]
