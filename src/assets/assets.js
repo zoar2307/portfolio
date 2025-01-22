@@ -1,4 +1,4 @@
-import logo from "@/assets/logoTemp.png"
+import logo from "@/assets/logo-text.png"
 import arrow_icon from "@/assets/arrow-icon.png"
 import header_background_gradient from "@/assets/header-bg-color.png"
 import moon_light from "@/assets/moon_icon.png"
