@@ -29,6 +29,10 @@ import mongo_db_icon from "@/assets/mongo-db-icon.png"
 import sql_icon from "@/assets/sql-icon.png"
 import express_icon from "@/assets/express-icon.png"
 
+import landing_page_icon from "@/assets/landing-page-icon.png"
+import web_icon from "@/assets/web-icon.png"
+import mobile_icon from "@/assets/mobile-icon.png"
+
 export const Assets = {
     logo,
     arrow_icon,
@@ -41,6 +45,7 @@ export const Assets = {
     right_arrow_white,
     download_icon,
     user_img,
+
     code_icon,
     code_icon_dark,
     edu_icon,
@@ -61,7 +66,9 @@ export const Assets = {
     sql_icon,
     express_icon,
 
-
+    landing_page_icon,
+    web_icon,
+    mobile_icon,
 }
 
 export const InfoList = [
@@ -93,4 +100,32 @@ export const SkillsAndTools = [
     { title: 'MongoDB', icon: mongo_db_icon },
     { title: 'SQL', icon: sql_icon },
     { title: 'Express', icon: express_icon },
+]
+
+export const ServicesData = [
+    {
+        icon: web_icon,
+        title: 'Website with SSR (Next.js)',
+        description: 'A website built with Next.js enables server-side rendering (SSR) for better performance and SEO, dynamically generating pages on the server before sending them to the browser.',
+        link: ''
+
+    },
+    {
+        icon: web_icon,
+        title: 'Web App with CSR (React)',
+        description: 'A client-side rendered (CSR) web app with React loads content dynamically in the browser after the initial page load, providing a smooth and interactive user experience.',
+        link: ''
+    },
+    {
+        icon: web_icon,
+        title: 'Landing Page with SSR (Next.js)',
+        description: ' A landing page with Next.js uses SSR to deliver fast-loading, SEO-optimized content, ideal for marketing campaigns and driving conversions.',
+        link: ''
+    },
+    {
+        icon: mobile_icon,
+        title: 'Mobile App with React Native',
+        description: 'A cross-platform mobile app built with React Native allows shared codebases for iOS and Android, leveraging native performance and features.',
+        link: ''
+    },
 ]

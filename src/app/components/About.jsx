@@ -25,7 +25,7 @@ const About = () => {
 
                             return (
                                 <li key={idx}
-                                    className='border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black'>
+                                    className='border-[0.5px] border-gray-400 rounded-xl p-6  hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black'>
                                     <Image src={icon} alt={title} className='mt-3 w-7' />
                                     <h3 className='my-4 font-semibold text-gray-700'>{title}</h3>
                                     <p className='text-gray-600 text-sm'>{description}</p>
@@ -40,7 +40,7 @@ const About = () => {
                         {SkillsAndTools.map(({ title, icon }, idx) => {
                             return (
                                 <li key={idx}
-                                    className='flex items-center justify-center w-12 sm:w-12 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black'>
+                                    className='flex items-center justify-center w-12 sm:w-12 aspect-square border border-gray-400 rounded-lg   hover:-translate-y-1 duration-500 hover:shadow-lg'>
                                     <Image src={icon} title={title} alt={title} className='w-5 sm:w-7' />
                                 </li>
                             )
