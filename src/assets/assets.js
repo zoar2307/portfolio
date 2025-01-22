@@ -1,16 +1,17 @@
-import logo from "@/assets/logo-text.png"
+import logo from "@/assets/logo-letters.png"
 import arrow_icon from "@/assets/arrow-icon.png"
 import header_background_gradient from "@/assets/header-bg-color.png"
 import moon_light from "@/assets/moon_icon.png"
 import menu_black from "@/assets/menu-black.png"
 import close_black from "@/assets/close-black.png"
-import profile_img from "@/assets/profile-img.png"
-import user_img from "@/assets/user-image.png"
+import profile_img from "@/assets/meTempSq.jpeg"
+import user_img from "@/assets/meTemp.jpeg"
 import hand_icon from "@/assets/hand-icon.png"
 import right_arrow_white from "@/assets/right-arrow-white.png"
 import download_icon from "@/assets/download-icon.png"
 import send_icon from "@/assets/send-icon.png"
 import github_icon from "@/assets/github-icon.png"
+import mail_icon from "@/assets/mail-icon.png"
 
 import code_icon from "@/assets/code-icon.png"
 import code_icon_dark from "@/assets/code-icon-dark.png"
@@ -50,6 +51,7 @@ export const Assets = {
     user_img,
     send_icon,
     github_icon,
+    mail_icon,
 
     code_icon,
     code_icon_dark,
@@ -146,7 +148,9 @@ export const WorkData = [
     {
         title: 'My Portfolio',
         description: 'Website with SSR (Next.js)',
-        bgImage: '/work-2.png'
+        bgImage: '/logo-text.png',
+        link: '#top',
+        githubLink: 'https://github.com/zoar2307/Monday-backend-project'
     },
 
 ]
