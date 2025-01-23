@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react";
+import { motion } from 'motion/react'
 
 const Contact = ({ isDarkMode }) => {
 
@@ -31,7 +32,10 @@ const Contact = ({ isDarkMode }) => {
 
 
     return (
-        <div
+        <motion.div
+            initial={{ y: 400, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
             style={{ backgroundImage: isDarkMode ? 'none' : `url('footer-bg-color.png')` }}
             className='w-full px-[12%] py-10 scroll-mt-20 bg-no-repeat bg-center bg-[length:90%_auto] '
             id='contact'>
@@ -63,7 +67,7 @@ const Contact = ({ isDarkMode }) => {
                     type='submit'>Submit now</button>
                 <p className='mt-4 text-center'>{result}</p>
             </form>
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,10 +1,15 @@
 import { Assets, WorkData } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
+import { motion } from 'motion/react'
 
 const Work = ({ isDarkMode }) => {
     return (
-        <div className='w-full px-[12%] py-10 scroll-mt-20' id='work'>
+        <motion.div
+            initial={{ y: 400, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+            className='w-full px-[12%] py-10 scroll-mt-20' id='work'>
             <h4 className='text-center mb-2 text-lg font-Ovo'>My portfolio</h4>
             <h2 className='text-center  text-5xl font-Ovo'>My latest work</h2>
             {/* <p className='text-center max-w-2xl mx-auto mt-5 mb12 font-Ovo'></p> */}
@@ -37,7 +42,7 @@ const Work = ({ isDarkMode }) => {
                     )
                 })}
             </div>
-        </div >
+        </motion.div >
     )
 }
 
