@@ -1,9 +1,14 @@
 import logo from "@/assets/logo-letters.png"
+import logo_light from "@/assets/logo-letters-light.png"
 import arrow_icon from "@/assets/arrow-icon.png"
+import arrow_icon_light from "@/assets/arrow-icon-dark.png"
 import header_background_gradient from "@/assets/header-bg-color.png"
 import moon_light from "@/assets/moon_icon.png"
+import sun_icon from "@/assets/sun_icon.png"
 import menu_black from "@/assets/menu-black.png"
+import menu_white from "@/assets/menu-white.png"
 import close_black from "@/assets/close-black.png"
+import close_white from "@/assets/close-white.png"
 import profile_img from "@/assets/meTempSq.jpeg"
 import user_img from "@/assets/meTemp.jpeg"
 import hand_icon from "@/assets/hand-icon.png"
@@ -39,11 +44,16 @@ import mobile_icon from "@/assets/mobile-icon.png"
 
 export const Assets = {
     logo,
+    logo_light,
     arrow_icon,
+    arrow_icon_light,
     header_background_gradient,
     moon_light,
+    sun_icon,
     menu_black,
+    menu_white,
     close_black,
+    close_white,
     profile_img,
     hand_icon,
     right_arrow_white,
@@ -140,7 +150,7 @@ export const ServicesData = [
 export const WorkData = [
     {
         title: 'Sundae',
-        description: 'Monday Clone App , Web App with CSR (React)',
+        description: 'Web App with CSR (React)',
         bgImage: '/sundae.png',
         link: 'https://sundae.onrender.com/',
         githubLink: 'https://github.com/zoar2307/Monday-backend-project'
@@ -150,7 +160,7 @@ export const WorkData = [
         description: 'Website with SSR (Next.js)',
         bgImage: '/logo-text.png',
         link: '#top',
-        githubLink: 'https://github.com/zoar2307/Monday-backend-project'
+        githubLink: 'https://github.com/zoar2307/portfolio'
     },
 
 ]

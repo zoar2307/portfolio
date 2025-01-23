@@ -12,10 +12,11 @@ const Services = () => {
             <div className='grid sm:grid-cols-2  lg:grid-cols-4 gap-6 my-10'>
                 {ServicesData.map(({ icon, title, description }, idx) => {
                     return (
-                        <div key={idx} className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-xl hover:-translate-y-1 duration-300'>
+                        <div key={idx} className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-xl hover:-translate-y-1 
+                        duration-300 dark:hover:bg-darkHover '>
                             <Image src={icon} alt={title} className='w-10' />
-                            <h3 className='text-lg my-4 text-gray-700'>{title}</h3>
-                            <p className='text-sm text-gray-600 leading-5'>{description}</p>
+                            <h3 className='text-lg my-4 text-gray-700 dark:text-white'>{title}</h3>
+                            <p className='text-sm text-gray-600 leading-5 dark:text-white/80'>{description}</p>
                         </div>
                     )
                 })}
