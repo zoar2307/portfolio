@@ -2,6 +2,7 @@ import { Assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from "motion/react"
+import ThreeScene from './ThreeScence'
 
 
 const Header = () => {
@@ -12,7 +13,8 @@ const Header = () => {
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.8, type: 'spring', stiffness: 100 }}
             >
-                <Image src={Assets.profile_img} alt='profile img' className='rounded-full w-32' />
+                {/* <Image src={Assets.profile_img} alt='profile img' className='rounded-full w-32' /> */}
+                <ThreeScene />
             </motion.div>
 
             <motion.h3

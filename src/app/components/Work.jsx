@@ -6,7 +6,7 @@ import { motion } from 'motion/react'
 const Work = ({ isDarkMode }) => {
     return (
         <motion.div
-            initial={{ y: 400, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             className='w-full px-[12%] py-10 scroll-mt-20' id='work'>
@@ -15,15 +15,16 @@ const Work = ({ isDarkMode }) => {
             {/* <p className='text-center max-w-2xl mx-auto mt-5 mb12 font-Ovo'></p> */}
 
             <div className='grid grid-cols-auto my-10 gap-5'>
-                {WorkData.map(({ title, description, bgImage, link, githubLink }, idx) => {
+                {WorkData.map(({ title, description, bgImage, link, githubLink, bgc }, idx) => {
                     return (
                         <div
                             key={idx}
-                            style={{ backgroundImage: `url(${bgImage})`, backgroundColor: isDarkMode ? 'white' : '' }}
-                            className='aspect-square bg-no-repeat bg-cover bg-center rounded-xl relative group border border-gray-400 overflow-hidden'
+                            style={{ backgroundImage: `url(${bgImage})`, backgroundColor: isDarkMode ? bgc : '' }}
+                            className='aspect-square bg-no-repeat bg-cover bg-center rounded-xl relative group border
+                             border-gray-400 overflow-hidden '
                         >
                             <div className='bg-white w-10/12 border border-gray-400 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 flex 
-                            items-center justify-between py-3 px-5 duration-500 group-hover:bottom-7'>
+                            items-center justify-between py-3 px-5 duration-500 group-hover:bottom-7 '>
                                 <div>
                                     <h2 className='font-semibold dark:text-black'>{title}</h2>
                                     <p className='text-sm to-gray-700 dark:text-black/80'>{description}</p>

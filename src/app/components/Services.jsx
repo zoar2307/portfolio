@@ -6,7 +6,7 @@ import { motion } from 'motion/react'
 const Services = () => {
     return (
         <motion.div
-            initial={{ y: 400, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             className='w-full px-[12%] py-10 scroll-mt-20' id='services'>

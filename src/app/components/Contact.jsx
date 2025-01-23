@@ -33,7 +33,7 @@ const Contact = ({ isDarkMode }) => {
 
     return (
         <motion.div
-            initial={{ y: 400, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             style={{ backgroundImage: isDarkMode ? 'none' : `url('footer-bg-color.png')` }}

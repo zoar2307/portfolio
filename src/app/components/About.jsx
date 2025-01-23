@@ -8,7 +8,7 @@ const About = ({ isDarkMode }) => {
     return (
         <motion.div
             className='w-full px-[12%] py-10 scroll-mt-20 ' id='about'
-            initial={{ y: 400, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}>
 
@@ -75,7 +75,7 @@ const About = ({ isDarkMode }) => {
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.7 }}
-                        className='my-6 text-gray-700 font-Ovo dark:text-white/80'>Skills</motion.h4>
+                        className='my-6 text-gray-700 font-Ovo dark:text-white/80'>Main skills</motion.h4>
 
                     <motion.ul
                         initial={{ opacity: 0 }}

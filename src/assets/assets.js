@@ -153,14 +153,16 @@ export const WorkData = [
         description: 'Web App with CSR (React)',
         bgImage: '/sundae.png',
         link: 'https://sundae.onrender.com/',
-        githubLink: 'https://github.com/zoar2307/Monday-backend-project'
+        githubLink: 'https://github.com/zoar2307/Monday-backend-project',
+        bgc: '#BEA9DF'
     },
     {
         title: 'My Portfolio',
         description: 'Website with SSR (Next.js)',
         bgImage: '/logo-text.png',
         link: '#top',
-        githubLink: 'https://github.com/zoar2307/portfolio'
+        githubLink: 'https://github.com/zoar2307/portfolio',
+        bgc: '#ff6961'
     },
 
 ]
