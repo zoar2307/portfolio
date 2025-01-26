@@ -5,14 +5,49 @@ import { motion } from 'motion/react'
 
 const Contact = ({ isDarkMode }) => {
 
+    const nameRegex = /^[a-zA-Z]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const textareaRegex = /^\S.*$/;
+
     const [result, setResult] = useState("");
+    const [nameValid, setNameValid] = useState(false);
+    const [emailValid, setEmailValid] = useState(false);
+    const [textareaValid, setTextareaValid] = useState(false);
 
     const onSubmit = async (event) => {
         event.preventDefault();
         setResult("Sending....");
+        const name = document.querySelector('.name')
+        const email = document.querySelector('.email')
+        const textarea = document.querySelector('.textarea')
+
+        if (!nameRegex.test(name.value)) {
+            setNameValid(true)
+            setResult('Invalid form')
+            return
+        } else {
+            setNameValid(false)
+        }
+
+        if (!emailRegex.test(email.value)) {
+            setEmailValid(true)
+            setResult('Invalid form')
+            return
+        } else {
+            setEmailValid(false)
+        }
+
+        if (!textareaRegex.test(textarea.value)) {
+            setTextareaValid(true)
+            setResult('Invalid form')
+            return
+        } else {
+            setTextareaValid(false)
+        }
+
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "6b1f173a-766d-487b-b929-7814967f6a3f");
+        formData.append("access_key", process.env.FORM_KEY);
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -47,19 +82,32 @@ const Contact = ({ isDarkMode }) => {
 
             <form onSubmit={onSubmit} className='max-w-2xl mx-auto' >
                 <div className='grid grid-cols-auto gap-6 mt-10 mb-8'>
-                    <input
-                        className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90'
-                        type="text" placeholder='Enter your name' required name='name' />
+                    <div className="flex flex-col ">
+                        <input
+                            className='name flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90'
+                            type="text" placeholder='Enter your name' name='name' />
+                        <p className={` text-red-500 font-Ovo text-sm  ${nameValid ? 'opacity-100' : 'opacity-0'}`}>Please enter valid name</p>
 
-                    <input
-                        className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white  dark:bg-darkHover/30 dark:border-white/90'
-                        type="email" placeholder='Enter your email' required name='email' />
+                    </div>
+
+                    <div className="flex flex-col ">
+                        <input
+                            className='email flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white  dark:bg-darkHover/30 dark:border-white/90'
+                            type="email" placeholder='Enter your email' name='email' />
+                        <p className={` text-red-500 font-Ovo text-sm ${emailValid ? 'opacity-100' : 'opacity-0'}`}>Please enter valid email</p>
+
+                    </div>
+
                 </div>
-                <textarea
-                    className='w-full p-4 outline-none  border-[0.5px] border-gray-400 rounded-md bg-white mb-6 resize-none  dark:bg-darkHover/30 dark:border-white/90'
-                    rows={'6'} placeholder='Enter your message' required name='message'>
+                <div className="flex flex-col mb-6">
+                    <textarea
+                        className='textarea w-full p-4 outline-none  border-[0.5px] border-gray-400 rounded-md bg-white  resize-none  dark:bg-darkHover/30 dark:border-white/90'
+                        rows={'6'} placeholder='Enter your message' name='message'>
+                    </textarea>
+                    <p className={` text-red-500 font-Ovo text-sm ${textareaValid ? 'opacity-100' : 'opacity-0'}`}>Please enter valid text</p>
 
-                </textarea>
+                </div>
+
 
                 <button
                     className='py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 
