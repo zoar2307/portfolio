@@ -12,7 +12,6 @@ const Work = ({ isDarkMode }) => {
             className='w-full px-[12%] py-10 scroll-mt-20' id='work'>
             <h4 className='text-center mb-2 text-lg font-Ovo'>My portfolio</h4>
             <h2 className='text-center  text-5xl font-Ovo'>My latest work</h2>
-            {/* <p className='text-center max-w-2xl mx-auto mt-5 mb12 font-Ovo'></p> */}
 
             <div className='flex flex-col my-10 gap-5 flex-wrap  xl:grid xl:grid-cols-auto  '>
                 {WorkData.map(({ title, description, fullDes, bgImage, link, githubLink, bgc }, idx) => {
