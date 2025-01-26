@@ -14,32 +14,45 @@ const Work = ({ isDarkMode }) => {
             <h2 className='text-center  text-5xl font-Ovo'>My latest work</h2>
             {/* <p className='text-center max-w-2xl mx-auto mt-5 mb12 font-Ovo'></p> */}
 
-            <div className='grid grid-cols-auto my-10 gap-5'>
-                {WorkData.map(({ title, description, bgImage, link, githubLink, bgc }, idx) => {
+            <div className='flex flex-col my-10 gap-5 flex-wrap  xl:grid xl:grid-cols-auto  '>
+                {WorkData.map(({ title, description, fullDes, bgImage, link, githubLink, bgc }, idx) => {
                     return (
-                        <div
-                            key={idx}
-                            style={{ backgroundImage: `url(${bgImage})`, backgroundColor: isDarkMode ? bgc : '' }}
-                            className='aspect-square bg-no-repeat bg-cover bg-center rounded-xl relative group border
-                             border-gray-400 overflow-hidden '
-                        >
-                            <div className='bg-white w-10/12 border border-gray-400 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 flex 
-                            items-center justify-between py-3 px-5 duration-500 group-hover:bottom-7 '>
-                                <div>
-                                    <h2 className='font-semibold dark:text-black'>{title}</h2>
-                                    <p className='text-sm to-gray-700 dark:text-black/80'>{description}</p>
+                        <div>
+                            <div
+                                style={{ backgroundColor: isDarkMode ? bgc : '' }}
+                                className=' bg-no-repeat bg-cover bg-center rounded-xl relative group border
+                             border-gray-400 overflow-hidden w-full h-96 '
+                            >
+
+                                <div className='w-full h-full md:group-hover:blur-md md:group-hover:opacity-70 absolute'>
+                                    <Image src={bgImage} width={1000} height={1000} className='w-full h-full object-contain' alt='project logo' />
                                 </div>
-                                <div className='flex justify-between items-center gap-3'>
-                                    <a href={link} target='_blank' className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-lg group-hover:bg-lime-50 transition cursor-pointer'>
-                                        <Image src={Assets.send_icon} alt='send-icon' className='w-6' />
-                                    </a>
-                                    <a href={githubLink} target='_blank' className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-lg group-hover:bg-lime-50 transition cursor-pointer'>
-                                        <Image src={Assets.github_icon} alt='github-icon' className='w-6' />
-                                    </a >
+                                <div className='hidden md:block w-full h-full md:group-hover:bg-black/70   duration-500 absolute left-0 top-0'></div>
+                                <p className='absolute hidden md:block  -top-60 group-hover:top-5 duration-500 text-white px-14 lg:px-20 '>{fullDes}</p>
+
+
+                                <div className='bg-white w-10/12 border border-gray-400 rounded-md absolute bottom-5  left-1/2 -translate-x-1/2 flex 
+                            items-center justify-between py-3 px-5 duration-500 md:-bottom-20 group-hover:bottom-7'>
+                                    <div>
+                                        <h2 className='font-semibold dark:text-black'>{title}</h2>
+                                        <p className='text-sm to-gray-700 dark:text-black/80'>{description}</p>
+                                    </div>
+                                    <div className='flex justify-between items-center gap-3'>
+                                        <a href={link} target='_blank' className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-lg group-hover:bg-lime-50 transition cursor-pointer'>
+                                            <Image src={Assets.send_icon} alt='send-icon' className='w-6' />
+                                        </a>
+                                        <a href={githubLink} target='_blank' className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-lg group-hover:bg-lime-50 transition cursor-pointer'>
+                                            <Image src={Assets.github_icon} alt='github-icon' className='w-6' />
+                                        </a >
+                                    </div>
                                 </div>
+
                             </div>
+                            <p className='md:hidden my-5 '>{fullDes}</p>
 
                         </div>
+
+
                     )
                 })}
             </div>

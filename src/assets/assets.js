@@ -151,6 +151,7 @@ export const WorkData = [
     {
         title: 'Sundae',
         description: 'Web App with CSR (React)',
+        fullDes: `The application featured real-time task management, role-based authentication, a drag-and-drop interface, and a modern stack: React.js, Node.js, Sass, Redux, and MongoDB. It supported real-time updates, customizable boards, mobile responsiveness, and AI-powered project board creation. Deployed on Render, it ensured high availability and seamless collaboration.`,
         bgImage: '/sundae.png',
         link: 'https://sundae.onrender.com/',
         githubLink: 'https://github.com/zoar2307/Monday-backend-project',
@@ -159,6 +160,8 @@ export const WorkData = [
     {
         title: 'My Portfolio',
         description: 'Website with SSR (Next.js)',
+        fullDes: `A simple one-page Next.js project built with Tailwind CSS, Framer Motion, and Web3Forms, following best practices for clean, efficient code. Fully responsive and optimized for all devices, the project is deployed on Netlify for fast and reliable performance.`
+        ,
         bgImage: '/logo-text.png',
         link: '#top',
         githubLink: 'https://github.com/zoar2307/portfolio',
