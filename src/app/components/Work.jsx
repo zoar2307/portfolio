@@ -16,7 +16,7 @@ const Work = ({ isDarkMode }) => {
             <div className='flex flex-col my-10 gap-5 flex-wrap  xl:grid xl:grid-cols-auto  '>
                 {WorkData.map(({ title, description, fullDes, bgImage, link, githubLink, bgc }, idx) => {
                     return (
-                        <div>
+                        <div key={idx}>
                             <div
                                 style={{ backgroundColor: isDarkMode ? bgc : '' }}
                                 className=' bg-no-repeat bg-cover bg-center rounded-xl relative group border
