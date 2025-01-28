@@ -7,7 +7,7 @@ const nextConfig = {
                 headers: [
                     {
                         key: "Content-Security-Policy",
-                        value: "default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api.web3forms.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:;",
+                        value: "default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api.web3forms.com blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:;",
                     },
                     {
                         key: "X-Frame-Options",

@@ -20,12 +20,29 @@ const ThreeScene = () => {
             containerRef.current.appendChild(renderer.domElement);
         }
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, 3);
+        // Ambient light for overall brightness
+        const ambientLight = new THREE.AmbientLight(0xffffff, 5);
         scene.add(ambientLight);
 
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 6);
-        directionalLight.position.set(0, 5, 5); // Closer to the center
-        scene.add(directionalLight);
+        // Directional light from the top-right with a blue tint
+        const directionalLight1 = new THREE.DirectionalLight(0x87ceeb, 4);
+        directionalLight1.position.set(5, 5, 5);
+        scene.add(directionalLight1);
+
+        // Directional light from the bottom-left with a pink tint
+        const directionalLight2 = new THREE.DirectionalLight(0xff69b4, 4);
+        directionalLight2.position.set(-5, -5, 5);
+        scene.add(directionalLight2);
+
+        // Point light with a yellow tint from the front
+        const pointLight1 = new THREE.PointLight(0xffff00, 3, 50);
+        pointLight1.position.set(0, 3, 5);
+        scene.add(pointLight1);
+
+        // Point light with a green tint from the back
+        const pointLight2 = new THREE.PointLight(0x00ff00, 3, 50);
+        pointLight2.position.set(0, -3, -5);
+        scene.add(pointLight2);
 
         const loader = new GLTFLoader();
         let object;
